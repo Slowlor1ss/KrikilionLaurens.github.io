@@ -4,466 +4,286 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio website of Laurens Krikilion">
-    <meta name="keywords" content="Portfolio, Laurens Krikilion, website, gamedev, programmer">
+    <meta name="description" content="Portfolio website of Laurens Krikilion, Programmer at Climax Studios LTD; Explore my latest projects, expertise in game engine development, and game optimizations. Contact information available">
+    <meta name="keywords" content="Portfolio, Laurens Krikilion, Laurens, Krikilion, website, gamedev, programmer, engine programmer, games">
     <meta name="author" content="Laurens Krikilion">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/scrollbar.css">
 	<link rel="stylesheet" href="css/gists.css">
 	<link rel="stylesheet" href="css/modal.css">
 	<link rel="stylesheet" href="css/ToTVideos.css">
+	<link rel="stylesheet" href="css/sliding-transitions.css">
 	<link rel="shortcut icon" href="Images/RubberDuckIcon.png" type="image/x-icon">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
     <title>Laurens Krikilion Portfolio</title>
 </head>
-    <body>
-		<div class="navbar">
-			<a href="#AboutMe">About</a>
-			<a href="#SoftwareSection">Software</a>
-			<a href="#Contact">Contact</a>
-			<a href="https://github.com/Slowlor1ss" target="_blank">Github<img src="Images/githubLogoRed.png" alt=" icon"></a>
-			<a href="Documents/Resume-Laurens-Krikilion.pdf" style="border-right: none;" target="_blank" rel="noopener noreferrer">CV</a>
-		</div>
-		<div class="parallax header">
-			<div class="title">
-				<header>
-				 	<h2>Laurens Krikilion</h2>
+<body>
+    <!-- Fixed Navbar - Outside the sliding container -->
+    <nav id="navbar" class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-brand">
+                <h1 class="navbar-title">Laurens Krikilion</h1>
+                <p class="navbar-subtitle">Game / Engine Programmer</p>
+            </div>
+            <div class="navbar-links">
+                <div class="nav-buttons">
+                    <a href="#portfolio" class="nav-btn" onclick="scrollToSection('portfolio')">Portfolio</a>
+                    <a href="#about" class="nav-btn" onclick="scrollToSection('about')">About</a>
+                </div>
 
-				 	<h1>Game / Software Developer</h1>
-					<h6 style="text-shadow: 0px 0px 10px black; transform: translateX(0%) translateY(90%); color: rgba(255,255,255,0.73);">
-						I'm a programmer from Belgium with a deep love for probem solving and learning new things<br>
-						I mainly specialize in C++ and engine programming<br>
-					</h6>
-<!--					<h3>Specialized in C++</h3>-->
-				  
-				</header>
-			</div>
-		</div>
-		<div class="parallax" style="background-image: url('Images/EndlessRunner.png');">
-			<div class="container containerOffset">
-				<div id="AboutMe" class="jumpAnchor"></div>
-				<h2 class="ContainerTitle">About me</h2>
-				<div class="horizontalContent">					
-					<img id="Me" src="Images/Lau.png" alt="Picture of me and some friends" style="grid-area: image;" width="80%" height= "auto">
-					<p style="grid-area: text;">
-<!--						I'm a programmer from Belgium with a broad interest in anything game-related.<br>
-						I have a deep love for learning and understanding new things<br>
-						ranging from game development to emulation and even ranging all the way to psychology<br><br>-->
-						
-						<!--However, m-->My main focus within game development is anything more <b>low-level</b> related,<br>
-						I love optimizing code and getting the most out of a small piece of code<br>
-						or working inside of an engine and adding new things or improving the old systems.<br>
-<!--						Seeing your code work or finding a really good solution for a problem is really something that keeps me going.<br> -->
-						Besides that I also love <b>gameplay</b>, for the freedom and creativity that comes with it.<br>
-						I like working in a team where everyone can help each other and shares a passion for making games.<br>
-						
-						Currently, I'm studying at <u><a target="_blank" href="https://www.digitalartsandentertainment.be/">DAE</a></u>. Where I'm starting my third year<br>
-						and <b>looking</b> for an <b>end‑of‑study</b> internship.<br><br>
-						
-<!--						However, my main focus within game development is <b>gameplay</b>, for the freedom and creativity that comes with it.<br>
-						Seeing a game mechanic you helped develop, in a final product and how it works nicely in the game <br>
-						and together with the other mechanics is an amazing thing.<br>
-						I like working in a team where everyone can help each other and shares a passion for making games.<br>
-						Besides that I also love anything more <b>low-level</b> related,<br> 
-						I love optimizing code and getting the most out of a small piece of code<br>
-						Currently, I'm studying at <u><a target="_blank" href="https://www.digitalartsandentertainment.be/">DAE</a></u>. Where I'm starting my third year<br>
-						and <b>looking</b> for an <b>end‑of‑study</b> internship.<br><br>-->
-						
-						I have a deep love for general problem solving and like a good challenge,<br>
-						being able to make something and then afterwards being able to see it all come together and function properly, <br>
-						together with being able to constantly learn new things and improve is something that keeps me going.<br>
-					</p>
-					<p class="MePictureText" style="font-size: 0.7rem; text-align: center; grid-area: imgText;">A picture of me, and some friends</p><!--transform: translatex(1vw) translateY(-2vw);-->
-				</div>
-			</div>
-		</div>
-		<div class="parallax" style="background-image: url('Images/3DForestLonerBackground.png');">
-			<div class="container containerOffset">
-				<div id="SoftwareSection" class="jumpAnchor"></div>
-				<h2 class="ContainerTitle">Portfolio work</h2>
-				<div class="SoftwareList">
-					<a onclick="OpenModalByid('8080Modal')" class="ProjectCard" target="_blank" rel="noopener noreferrer">
-						<h2>8080 emulator</h2>
-						
-						<img src="Images/8080Emulator.jpg" alt="8080" id="8080">
-						<p>
-							A <b>8080 microprocessor emulator</b> that can run classic space invaders and COM programs, <br>
-							Fully written in <b>C++</b> I mainly chose this emulator to learn more about emulator development and low-level programming.
-						</p>
-						<div class="SoftwarePopup">
-							<img src="https://github.com/Slowlor1ss/8080Emulator/blob/main/Images/Animation2.gif?raw=true" style="width: 70% ; height: 70%" alt="A gif of a working 8080 emulator">
-						</div>
-					</a>
-					<a onclick="OpenModalByid('rpModal');" class="ProjectCard" target="_blank" rel="noopener noreferrer">
-						<h2>Reinforcement Learning</h2>
-						
-						<img src="Images/RenforedLearning.png" alt="View range of agent" id="nox">
-						<p>
-							This was a <b>research project</b> I did about <b>reinforcement learning</b> in 2D shooter games.
-						</p>
-						<div class="SoftwarePopup">
-							<img src="https://github.com/Slowlor1ss/2D-Shooter-MachineLearning/blob/main/source/Media/Combined.gif?raw=true" alt="Gif of machineLearning result">
-						</div>
-					</a>
-					<a onclick="OpenModalByid('PlayTimeModal');" class="ProjectCard" target="_blank" rel="noopener noreferrer">
-						<h2>RayMarching</h2>
-						
-						<img src="Images/spheretrace-modified.jpg" alt="Ray matching 2D example" id="nox">
-						<p>
-							This is a small Unity project I made to experiment with <b>compute shaders</b> and <b>ray marching</b>.
-						</p>
-						<div class="SoftwarePopup">
-							<img src="https://github.com/Slowlor1ss/KrikilionLaurens.github.io/blob/main/Images/BallsSmaller.gif?raw=true" alt="Gif of blending balls using ray-marching">
-						</div>
-					</a>
-					<a onclick="OpenModalByid('Respect-the-lawn-Modal');" class="ProjectCard" target="_blank" rel="noopener noreferrer">
-						<h2>Respect The Lawn</h2>
-						
-						<img src="Images/RespectTheLawn.png" alt="Respect the lawn" id="Respect-the-lawn">
-						<p>
-							<b>Under construction</b><br>
-							A brand new game I'm working on with a lovely <b>team</b>, currently <b>still in prototyping phase</b> but soon enough
-							more about the game and development will be available here.
-						</p>
-					</a>
-					
-					<a href="Compiler" class="ProjectCard" style="cursor: not-allowed; background-color: rgba(66,66,66,0.40);" onclick="return false;" onFocus="return false">
-						<h2>Compiler Construction</h2>
-						
-						<img src="Images/CompilerLogo.png" alt="Respect the lawn" id="Respect-the-lawn">
-						<p>
-							<b>Under construction</b><br>
-							For my graduation work I'm writing my own compiler for a self made language, I'll be looking in to optimazation techniques and merging scheduling and register allocation.<br>
-						</p>
-					</a>
-					
-					<a onclick="OpenModalByid('GroupProjects')" class="ProjectCard" target="_blank" rel="noopener noreferrer">
-						<h2>The Ascend</h2>
-					
-						<img src="Images/GroupProjectss.jpg" alt="Game project cover" id="tot">
-						<p>
-							The Ascend is a <b>game project</b> I worked on in a <b>team</b>, it was made in Unity and version controlled by <b>perforce</b>. The only requrement that we had was to make a local co-op game.
-						</p>
-						<div class="SoftwarePopup">
-							<video src="Images/ToT.mp4" alt="A gameplay video" autoplay muted controls loop></video>
-						</div>
-					</a>
-					
-					<!--<a onclick="OpenModalByid('crunchModal')" class="ProjectCard" target="_blank" rel="noopener noreferrer">
-						<img src="Images/TheCrunch.png" alt="Game jam game cover" id="crunch">
-						<p>
-							This was the first game I ever publicly released. It was for the Ludum dare 42 <b>game jam</b>, a friend did the art and I did all the programming (in <b>C++</b>).
-							It's an <b>old game</b> and the code was a mess, but it'll always be my first real game.
-						</p>
-						<div class="SoftwarePopup">
-							<img src="Images/TheCrunch.gif" alt="Gif of 'The crunch' gameplay">
-						</div>
-					</a>
-					<a onclick="OpenModalByid('gbSoundModal')" class="ProjectCard" target="_blank" rel="noopener noreferrer">
-						<img src="Images/GameboySound.png" alt="Gameboy sound icon" id="gbSound">
-						<p>
-							<u><b>[WIP] Gameboy sound</b></u><br>
-							I'm currently researching how the gameboy played <b>sound</b> for my graduation work. The eventual goal is to add accurate sound to an existing gameboy emulator. 
-						</p>
-					</a>-->
-				
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div id="Contact" class="jumpAnchor"></div>
-			
-			<h2 id="test">Keep in touch:</h2>
-			<section class="contactSection">
-				<a href="https://www.linkedin.com/in/laurens-krikilion-521705223/" class="">
-					<img src="Images/LinkedIn.png" alt="LinkedIn">
-					<p>
-						Add me on LinkedIn
-					</p>
-				</a>
-				<a href="mailto:laurens.krikilion@outlook.com" class="">
-					<img src="Images/mail.png" alt="Send me a mail">
-					<p>
-						Send me a mail
-					</p>
-				</a>
+                <div class="separator"></div> <!-- This is the vertical line -->
 
+                <div class="navbar-links">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/laurens-krikilion-521705223/" class="social-link linkedin-btn" target="_blank" title="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/Slowlor1ss" class="social-link github-btn" target="_blank" title="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+						<!-- <a href="https://Slowloriss.itch.io" class="social-link" target="_blank" title="Itch.io">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+								<path d="M3.13 1.338C2.08 1.96.02 4.328 0 4.95v1.03c0 1.17 1.2 2.12 2.69 2.12 1.47 0 2.67-.95 2.67-2.12 0 1.17 1.2 2.12 2.67 2.12 1.47 0 2.67-.95 2.67-2.12 0 1.17 1.2 2.12 2.67 2.12 1.47 0 2.67-.95 2.67-2.12 0 1.17 1.2 2.12 2.67 2.12 1.49 0 2.69-.95 2.69-2.12V4.95c-.02-.62-2.08-2.99-3.13-3.61-1.7-.66-7.33-.66-9.03 0zM20.8 6.17c-1.39 0-2.52.95-2.52 2.11 0 1.15 1.13 2.08 2.52 2.08 1.38 0 2.52-.93 2.52-2.08 0-1.16-1.14-2.11-2.52-2.11zM3.2 6.17c-1.39 0-2.52.95-2.52 2.11 0 1.15 1.13 2.08 2.52 2.08 1.38 0 2.52-.93 2.52-2.08 0-1.16-1.14-2.11-2.52-2.11zm7.31 5.81c-.46-.8-1.17-1.36-2.01-1.36-.84 0-1.55.56-2.01 1.36-.46.8-.46 2.16 0 2.96.46.8 1.17 1.36 2.01 1.36.84 0 1.55-.56 2.01-1.36.46-.8.46-2.16 0-2.96zm5.98 0c-.46-.8-1.17-1.36-2.01-1.36-.84 0-1.55.56-2.01 1.36-.46.8-.46 2.16 0 2.96.46.8 1.17 1.36 2.01 1.36.84 0 1.55-.56 2.01-1.36.46-.8.46-2.16 0-2.96zM12 15.61c-.67 0-1.22.54-1.22 1.21v5.11c0 .67.55 1.22 1.22 1.22.67 0 1.22-.55 1.22-1.22v-5.11c0-.67-.55-1.21-1.22-1.21z"/>
+							</svg>
+						</a> -->
+                        <a href="Documents/Resume-Laurens-Krikilion.pdf" class="resume-btn" target="_blank">Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Container for Sliding Effect -->
+    <div class="page-container">
+        <!-- Main Page Content -->
+        <div class="main-page" id="mainPage">
+            <header>
+                <div class="container">
+                    <div class="hero-content">
+                        <img src="Images/IMG_7056.jpg" alt="Profile Picture" class="profile-image">
+                        <div class="hero-text">
+                            <h3 class="hero-subtitle"> 
+                                I'm a programmer from Belgium with a deep love for probem solving and learning new things<br>
+                                I mainly specialize in C++ and Engine programming<br>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="container">
+                <section id="portfolio" class="portfolio-section">
+                    <h2 class="section-title">My Work</h2>
+                    <div class="portfolio-grid" id="portfolioGrid">
+						<!-- portfolio items -->
+                         <div class="portfolio-item" onclick="openProjectDetail(6)" style="cursor: not-allowed; background-color: rgba(66,66,66,0.40);">
+                            <img src="Images/mystery-product.png" 
+                            style="width: 80%" alt="Mystery picture" class="item-media">
+                            <div class="item-content">
+                                <h3 class="item-title">Upcoming AAA Port</h3>
+                                <p class="item-description">
+									Currently I'm working on a well known <b>AAA</b> franchise targeting <b>current-gen consoles</b>.
+                                </p>
+                            </div>
+                        </div>
+						<div class="portfolio-item" onclick="openProjectDetail(5)">
+							<video 
+								autoplay 
+								loop 
+								muted 
+								playsinline 
+								class="item-media"
+								alt="Video of the Age Of Empires IV Console Launch Trailer">
+								<source src="https://github.com/Slowlor1ss/KrikilionLaurens.github.io/blob/main/Images/Age of Empires IV Console Launch Trailer.mp4?raw=true" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+							<!-- <img src="https://github.com/Slowlor1ss/KrikilionLaurens.github.io/blob/main/Images/Age of Empires IV Console Launch Trailer.mp4?raw=true"  
+							alt="Video of the Age Of Empires IV Console Launch Trailer" class="item-media">-->
+							<div class="item-content">
+								<h3 class="item-title">Age of Empires IV</h3>
+								<p class="item-description">
+									This is the first <b>AAA</b> game I've worked on myself, as part of the optimization team during the port to <b>Xbox</b>.
+								</p>
+							</div>
+						</div>
+
+						<div class="portfolio-item" onclick="openProjectDetail(4)">
+							<img src="Images/CompilerLogo.png" 
+							style="width: 60%" alt="Compiler image" class="item-media">
+							<div class="item-content">
+								<h3 class="item-title">Self made Compiler</h3>
+								<p class="item-description">
+									For my graduation work I wrote my own compiler for a self made language,<br>
+                                    I looked in to optimazation techniques and profiling each one of these.
+								</p>
+							</div>
+						</div>
+
+                        <div class="portfolio-item" onclick="openProjectDetail(0)">
+                            <img src="https://github.com/Slowlor1ss/8080Emulator/blob/main/Images/Animation2.gif?raw=true" 
+                                style="width: 70%" alt="A gif of my working 8080 emulator" class="item-media">
+                            <div class="item-content">
+                                <h3 class="item-title">8080 emulator</h3>
+                                <p class="item-description">
+                                    A <b>8080 microprocessor emulator</b> that can run classic space invaders and COM programs, <br>
+                                    Fully written in <b>C++</b> I mainly chose this emulator to learn more about emulator development and low-level programming.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-item" onclick="openProjectDetail(1)">
+                            <img src="https://github.com/Slowlor1ss/2D-Shooter-MachineLearning/blob/main/source/Media/Combined.gif?raw=true"
+                                alt="Gif of machineLearning result" class="item-media">
+                            <div class="item-content">
+                                <h3 class="item-title">Reinforcement Learning</h3>
+                                <p class="item-description">
+                                    This was a <b>research project</b> I did about <b>reinforcement learning</b> in 2D shooter games.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-item" onclick="openProjectDetail(2)">
+                            <img src="https://github.com/Slowlor1ss/KrikilionLaurens.github.io/blob/main/Images/BallsSmaller.gif?raw=true" 
+                            alt="Gif of blending balls using ray-marching" class="item-media">
+                            <div class="item-content">
+                                <h3 class="item-title">RayMarching</h3>
+                                <p class="item-description">
+                                    This is a small Unity project I made to experiment with <b>compute shaders</b> and <b>ray marching</b>.
+                                </p>
+                            </div>
+                        </div>
+
+						<div class="portfolio-item" onclick="openProjectDetail(3)">
+                            <!-- <img src="Images/RespectTheLawn.png" 
+                            alt="Respect the lawn" class="item-media"> -->
+                            <iframe 
+                                src="https://www.youtube.com/embed/yJvUVhK9L1s?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&showinfo=0&rel=0&playlist=yJvUVhK9L1s" 
+                                title="Respect the Lawn Gameplay trailer" 
+                                frameborder="0" 
+                                allow="autoplay; encrypted-media" 
+                                allowfullscreen
+                                class="item-media">
+                            </iframe>
+                            <div class="item-content">
+                                <h3 class="item-title">Respect The Lawn</h3>
+                                <p class="item-description">
+									A game I worked on with a lovely <b>team</b>, about a little muchroom man defending his garden from a rampaging lawnmower.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+			</main>
+
+			<!-- About Section -->
+			<section id="about" class="about-section">
+				<div class="container">
+					<div class="about-content">
+						<h2 class="section-title" style="margin-left: -11px;">About Me</h2>
+						<p class="about-text">
+							Currently, I'm working at <u><a target="_blank" href="https://www.climaxstudios.com/">Climax Studios</a></u>. Where I'm a mid level engine programmer.<br>
+							<!--However, m-->My main focus within game development is anything more <b>low-level</b> related,<br>
+							I love optimizing code and getting the most out of a small piece of code<br>
+							or working inside of an engine and adding new things or improving the old systems.<br>
+							<!--Seeing your code work or finding a really good solution for a problem is really something that keeps me going.<br> -->
+							Besides that I also love <b>gameplay</b>, for the freedom and creativity that comes with it.<br>
+							I like working in a team where everyone can help each other and shares a passion for making games.<br><br>
+							
+							I have a deep love for general problem solving and like a good challenge,<br>
+							being able to make something and then afterwards being able to see it all come together and function properly, <br>
+							together with being able to constantly learn new things and improve is something that keeps me going.<br>
+						</p>
+						
+						<div class="skills-grid">
+							<div class="skill-item">
+								<h3 class="skill-title">Programming Languages</h3>
+								<p class="skill-description">C, C++, C#, Lua, Python</p>
+							</div>
+							<div class="skill-item">
+								<h3 class="skill-title">Platforms</h3>
+								<p class="skill-description">PC- Windows & Linux, XBox, PS5/4<br>Custom engines, Unity</p>
+							</div>
+							<div class="skill-item">
+								<h3 class="skill-title">Tools</h3>
+								<p class="skill-description">Perforce, Git, Superluminal, PIX, Playstation Razor Apps</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
-		</div>
-		<footer>
-			<h1>//</h1>
-			<p>
-				Phone (BE): +32 468 32 02 49 | Email: laurens.krikilion@outlook.com<br>
-				Copyright &copy <span id="year">2021</span> Laurens Krikilion. All rights reserved
-			</p>
-		</footer>
 
-		<!-- 8080 emulator -->
-		<div class="modal" id="8080Modal">
-			<div class="modal-content">
-				<div class="modal-header">
-					<a class="GithubButton" href="https://github.com/Slowlor1ss/8080Emulator" target="_blank" rel="noopener noreferrer">View&nbsp;on&nbsp;GitHub</a>
-					<div></div>
-					<span class="modal-close">&times;</span>
-				</div>
-				<div class="modal-body">
-					<h1 class="underlined">8080 processor</h1>
-					<br>
-					<p>
-						A complete 8080 microprocessor emulator that can run classic space invaders and some COM programs, 
-						I mainly chose this emulator to learn more about emulator development and low-level programming.
-					<br>
-					<br>
-					All 255 opcodes have been implemented and tested, also some dedicated shift hardware has been emulated as space invaders use this for moving pixels on the screen and thus adds a hardware shift register to help with the math.
-					<br>
-					<br>
-					As the 8080 is a microprocessor and not a complete machine like a Gameboy, it does not have a standard input or sound, only some ports that can receive and send signals.
-					So for sending keyboard signals I used Qt as these are not really part of emulating an 8080. 
-					For now there's no sound but emulating a sound card used in old arcade machines might be a fun project for the future.
-					<br><br><br>
-					<h3> Dissasembleing ROM's: </h3> <br>
-					<img src="https://github.com/Slowlor1ss/8080Emulator/blob/main/Images/DissasembelingROM.png?raw=true" style=" width:40% ; height:40% ">
-					<br><br><br>
-					<h3> Passed MICROCOSM ASSOCIATES 8080/8085 CPU DIAGNOSTIC: </h3> <br>
-					<img src="https://github.com/Slowlor1ss/8080Emulator/blob/main/Images/TestSuccess.png?raw=true" style=" width:40% ; height:40% ">
-					<br><br><br>
-					<h3> Easy debugging: </h3> <br>
-					<img src="https://github.com/Slowlor1ss/8080Emulator/blob/main/Images/Debugging1.png?raw=true" style=" width:40% ; height:40% ">
-					</p>
-					
-<!--					<h3>Emulation</h3>
-					<p>Opcodes are the heart of any emulator (or cpu). For Chip-8 each opcode is 2 bytes (big-endian) consisting of bits to identify the opcode and bits that contain data.
-						For example, "00EE" returns from a subroutine and "2NNN" calls a subroutine at whatever value "NNN" has. The following code is used to identify an opcode and know which function it relates to.
-					</p><br>
-					<script src="https://gist.github.com/RikFabri/6899d2ab4c45a2548e3b1fd191e25825.js"></script>
-					<p>We can then simply loop over a vector containing our OpcodeDetails and call the appropriate functions like this.</p><br>
-					<script src="https://gist.github.com/RikFabri/d598ca82845093856076134291835bca.js"></script>
-					<h3>Sprites</h3>
-					<p>Chip-8 has an interesting way of handling sprites and collisions. Drawing a sprite uses opcode "DXYN" which provides us with both the registers for the x and y coordinates and the height of the sprite (n).
-						To actually draw the sprite, we read a byte for each row in the sprite (n) at the memory address stored in I (this is a special 16bit register meant to store memory addresses).
-						Each bit represents whether or not a pixel is white. The pixel is then xor'ed onto the display, if an older pixel is unset, a collision flag is set for later use.
-						This way, we can draw sprites that are 8 pixels wide (1 byte) and n-rows long.
-						<br><br>
-						In the code snippet underneath, vm.Vx is the virtual machine's array of registers.
-					</p><br>
-					<script src="https://gist.github.com/RikFabri/79a53d70f335ec25d0270812d0308af5.js"></script>
-					<h3>QT</h3>
-					<p>
-						The hardest part of setting up QT for this project was figuring out how to render the emulator's viewport.
-						I tried opengl but eventually decided that was overkill and settled for the built-in QPainter class. 
-						In the end, I made a widget that inherits from QOpenGLWidget and overrides the paintEvent method like this.
-					</p><br>
-					<script src="https://gist.github.com/RikFabri/8e797231cbfd3731663d2733a485a22f.js"></script>
-					<h3>Cmake</h3>
-					<p>
-						The cmake for this project ended up being really simple. The CMakeLists for QT is almost entirely managed by QT creator.
-						The Chip-8 part is compiled as a stand-alone library like this.
-					</p><br>
-					<script src="https://gist.github.com/RikFabri/d2ee11056d7943566f73de4dc21178d2.js"></script>
-					<br>
-					<p>
-						We then tie together the project like this:
-					</p><br>
-					<script src="https://gist.github.com/RikFabri/a9d31ec725235e677f63e96a6e660405.js"></script>-->
-				</div>
-			</div>
-		</div>
-
-		<!-- Research project -->
-		<div class="modal" id="rpModal">
-			<div class="modal-content">
-				<div class="modal-header">
-					<a class="GithubButton" href="https://github.com/Slowlor1ss/Reinforcement-Learning-in-a-2D-Shooter" target="_blank" rel="noopener noreferrer">View&nbsp;on&nbsp;GitHub</a>
-					<div></div>
-					<span class="modal-close">&times;</span>
-				</div>
-				<div class="modal-body">
-					<h1 class="underlined">Reinforcement Learning</h1>
-					<br>
-					<h3>Description</h3>
-					<p>
-						This was a research project I did about reinforcement learning in 2D shooter games, while this project didn't turn out as well as I hoped it would, I did learn a lot from it and really enjoyed it.<br>
-						The code in this project isn't the best as it was mainly focused on research. However besides these things I did get some nice results and managed to write a small article about the process.<br>
-						<br>
-						You can find the full research paper with all the code on my github (see top left for link)<br>
-						but here's my conclusion.<br> 
-					</p>
-					<br>
-					<h3>Conclusion</h3>
-					<p>
-						The aim of this paper was to see how well I can use RL to learn a bot basic AI behaviours and how well it would perform in a 2d shooter.
-						From my attempt, I can conclude that basic AI behaviours aren't too hard to teach, but teaching an agent how to properly navigate or explore
-						a map is a lot harder. I do believe that it is possible, if you have the required knowledge and time for it.
-						When you do manage to do it properly, I can see various advantages for using Rl over rule-based systems such as;
-						- Minimal code needed for the underlying algorithm in some cases
-						- Decrease in the time spent tuning parameters for different situations
-						- The ability to produce different bot personality types
-						I'd say that teaching an agent how to explore a room was hard for
-						my low experience when starting this project - combined with the limited time.
-						It might have been better to start off simpler. However, I did learn a lot about machine learning in general
-						and I have improved dramatically. So therefore - when I have time - I might restart or continue on this project and try to make something better.
-						Further work could be spent on trying different environmental setups with the same agents to see how well they perform in an unknown environment.
-						Some of the tasks have already been tested in different environmental setups like the searching for items and shooting an enemy as those setups were random.
-
-						There is a clear future for RL in games, and the potential is limitless.
-						When you combine it with more conventional rule-based systems, the options are endless.
-						I am genuinely excited to witness the progressions.
-					</p>
-					<img src="https://github.com/Slowlor1ss/2D-Shooter-MachineLearning/blob/main/source/Media/Combined.gif?raw=true" alt="Gif of machine learning" style="width: 25%; padding-top: 2%">
-				</div>
-			</div>
-		</div>
-
-		<!-- raymarching modal -->
-		<div class="modal" id="PlayTimeModal">
-			<div class="modal-content">
-				<div class="modal-header">
-					<a class="GithubButton" href="https://github.com/Slowlor1ss/Raymarching/" target="_blank" rel="noopener noreferrer">View&nbsp;on&nbsp;GitHub</a>
-					<div></div>
-					<span class="modal-close">&times;</span>
-				</div>
-				<div class="modal-body">
-					<h1 class="underlined">Raymarching</h1>
-					<h3>Description</h3>
-					<p>This was my first time using unity's compute shader so I started off by making a small test project randomizing the color and position of some cubes,<br>
-						I found that it wasn't too diffrent from a class I had in school where we made a raytracer and rasterizer in C++ using DirectX and HLSL,so it was suprisingly easy to get in to.<br>
-					After that I felt confident enough to start on making the raymarching project.<br><br>
-<!--					I got the idea of making something with raymarching from a video I watched by <a href="https://www.youtube.com/c/SebastianLague" target="_blank">Sebastian Lague</a> and was happy to find some nice documentation in his video description that helped me along the way.<br>-->
-						Making the actual raymarching shader was suprisingly easy, having made a raytracer in the past, it was interesting to see the differences between<br>
-						the raytracer and raymarching and seeing whats possible using the signed distance formulas raymarching uses.<br>
-						If you're interested you can find and download my project and or read more about it on <a href="https://github.com/Slowlor1ss/Raymarching/" target="_blank">my github</a>.<br>
-					</p><br>
-					<h3>Result</h3>
-					<p> 
-						Using signed distance functions allows you to do some operation between shapes like masking, blending, and cutting
-						and by combining shapes and using those operation you can create many thing's (some more usefull than others) 
-						but regardless of the use case it can be very fun to play around with.
-					</p><br>
-					<div class="ImagesSideBySide">
-						<img src="https://github.com/Slowlor1ss/KrikilionLaurens.github.io/blob/main/Images/ResultRayMarching.gif?raw=true" style="width: 40vw;">
-						<img src="Images/csg-wiki.png" alt="Image from "Constructive solid geometry" on Wikipedia" style="float: right; width: 26vw; margin-left: 15vw">
-						<div style="font-size: 0.7vw;">&ensp;Small animation I made using my raymarching code</div>
-						<div style="font-size: 0.7vw; float: right;">Image from "Constructive solid geometry" on Wikipedia<br>demonstrating some of the shape operations</div>
+			<footer>
+				<section id="Footer" class="footer-section">
+					<div class="container">
+						<div class="footer-content">
+							<h1 class="footer-title">/*</h1>
+							<p class="footer-text">
+								Email: 
+								<a href="mailto:laurens.krikilion@outlook.com" style="color: inherit; text-decoration: inherit; font-weight: bold;">
+									laurens.krikilion@outlook.com
+								</a><br>
+								Copyright &copy <span id="year">2021</span> Laurens Krikilion. All rights reserved
+							</p>
+							<h1 class="footer-title" style="text-align: right">*/</h1>
+						</div>
 					</div>
-				</div>
-			</div>
-		</div>
+				</section>
+			</footer>
+        </div>
 
-		<!-- The crunch modal -->
-		<div class="modal" id="Respect-the-lawn-Modal">
-			<div class="modal-content">
-				<div class="modal-header">
-<!--					<a class="GithubButton" href="https://ldjam.com/events/ludum-dare/42/the-crunch" target="_blank" rel="noopener noreferrer">View&nbspon&nbspLDJam</a>-->
-					<!-- <div style="display: grid; grid-template-columns: auto auto; grid-column-gap: 1rem;">
-						<a class="GithubButton" href="https://github.com/RikFabri/LD42" target="_blank" rel="noopener noreferrer">View&nbspon&nbspGitHub&nbsp(bad&nbspcode)</a>
-					</div> -->
-					<div></div> <!--remove this line when adding button; to make close cross work properly-->
-					<div></div>
-					<span class="modal-close">&times;</span>
-				</div>
-				<div class="modal-body">
-					<!--<h1 class="underlined">Respect the Lawn</h1>-->
-					<img src="Images/RespectTheLawnTitle.png" style="width: 40vw;" alt="Respect the Lawn title">
-					<h3>Group Project</h3>
-					<p>
-						This is a <b>group project</b> I'm currently working on together with some friends in school. The group consists of 3 artists and 2 programmers. In our game you play as a mushroom in a large garden, but there's a big lawnmower that keeps destroying your home, so you set out on a mission to stop the lawnmower.
-						Currently were still prototyping so there wont be much code to show yet however I can show some things I've been working on for the game.
-					</p><br>
-					<h3>Procedural Animations</h3>
-					<p>
-						To lessen the workload of the artists we decided to make the animation of our insects procedural,
-						so I made a prototype to test how well this would work and if it was a better alternative than animating the insects, the prototype was a success and I was surprised myself how easy it was to make, now there's a lot less to animate and the procedural animations allows versatile movement so our insects can seeminglessly traverse the landscape of the garden.
-					</p>
-					<br>
-					<img src="Images/ProceduralAnimation.gif" style="width: 40vw;" alt="ProceduralAnimation">
-					<br>
-					<br>
-					<h3>Ai</h3>
-					<p>
-						Next to the proceduaral animations I'm also responsible for most of the Ai, however as we are making our game in Unity there isn't too much interesting to show here, I use unity's navmesh agents combined with a Finite State Machine I wrote myself. Maybe in the future there will be something noteworthy to showcase about this.
-					</p>
-					<br>
-					<h3>Conclusion</h3>
-					<p> 
-						Even though there isn't a lot to showcase here yet, this project is still on my portfolio as it's currently under construction and I am hoping to have a fun game by the end of this project.
-						<br>It also shows I'm still actively working on making games next to the more scientific projects I have presented on my portfolio.
-					</p>
-				</div>
-			</div>
-		</div>
-		
-		<!-- Gameboy sound modal -->
-		<div class="modal" id="gbSoundModal">
-			<div class="modal-content">
-				<div class="modal-header">
-					<div></div><div></div>
-					<span class="modal-close">&times;</span>
-				</div>
-				<div class="modal-body">
-					<h1 class="underlined">Gameboy sound [WIP]</h1>
-					<p>
-						I'm doing my graduation work on gameboy sound. The minimum goal is to have an emulator play sound. I'm still looking for a research question and interesting topics to explore later on. 
-						It might be interesting to hear how the music sounds when you apply more modern sound processing to the emulator for example.
-					</p><br>
-					<h3>Relevant topics</h3>
-					<p>
-						I can reuse what I learned from the chip-8 emulator to know which <u>opcodes</u> to add/implement. I'm also looking into how <u>PCM</u> works and how to play back generated waveforms through <u>SDL</u>.
-					</p><br>
-				</div>
-			</div>
-		</div>
+        <!-- Project Detail Page -->
+        <div class="project-detail-page" id="projectDetailPage">
+            <button class="close-project" onclick="closeProjectDetail()">← Back to Portfolio</button>
+            
+            <div class="project-header">
+                <img id="projectHeroMedia" class="project-hero-media" src="" alt="">
+				<video 
+					id="projectHeroVideo"
+					autoplay 
+					loop 
+					muted 
+					playsinline 
+					class="project-hero-media"
+					alt="">
+					<source src="" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+            </div>
+            
+            <div class="project-content">
+                <h1 id="projectDetailTitle" class="project-title"></h1>
+                <p id="projectDetailDescription" class="project-description"></p>
+                <img id="projectDescriptionMedia" class="project-description-media" src="" alt="">
+                
+                <div id="projectExtra" class="project-extra"></div>
 
-		<!-- The Ascend -->
-		<div class="modal" id="GroupProjects">
-			<div class="modal-content">
-								<div class="modal-header">
-					<a class="GithubButton" href="https://goldarf.itch.io/gameproject-wip-team21" target="_blank" rel="noopener noreferrer">View&nbspon&nbspItch.io</a>
-					<div></div>
-					<span class="modal-close">&times;</span>
-				</div>
-				<div class="modal-body">
-					<h1 class="underlined">The Ascend</h1>
-					<br>
-					<p>
-						You can check out the whole progress of making the game <a href="https://goldarf.itch.io/the-ascend/devlog" target="_blank">here</a>
-					</p>
-					<br>
-					<p>
-						The Ascend is a game where the two main characters Bling and Blong fell down a ravine and on their way out they uncover the mysteries of a long lost tomb.<br>
-						It's a game where you have to work together to solve puzzles and make your way trough the level, the only catch is that you bound together by a rope, luckly you can use this rope to slove the puzzles and get out of the ravine.<br>
- 						Everything was made in unity and version controlled with <u>perforce</u>.
-					</p><br>
-					<h3>The team and responsibilities</h3><br>
-					<img id="TheTeam" src="Images/I+c0zX.png" alt="Picture of me" style="grid-area: image;" width="25%" height= "auto">
-					<p>
-						We were a team of 1 programmer and 3 artists. Initially, we had 2 programmes but one of them dropped out before during the prototyping phase.<br>
-						So essentially all the programming was done by myself.
-					</p><br>
-					<h3>Video</h3>
-					<br>
-<!--					<div class="horizontalToTVideos">-->
-					<div class="video-container">
-						<iframe width="50%" src="https://www.youtube.com/embed/bE9wlSrDtwM" title="The Ascend gameplay trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<!--
-						<h4 class="underlined" style="grid-area: label1;">Trailer</h4>
-						<h4 class="underlined" style="grid-area: label2;">Gameplay</h4>
-						<video style="grid-area: vid1; width: 100%; height: 100%; background: black;" src="https://www.youtube.com/embed/bE9wlSrDtwM" alt="Game trailer" controls></video>
-						<video style="grid-area: vid2; width: 100%; height: 100%; background: black;" src="Images/ToT.mp4" alt="A gameplay video" controls muted></video>
--->
-					</div>
-				</div>
-			</div>
-		</div>
-		
+                <div class="project-tech-stack">
+                    <h3 style="color: #4a90e2; font-size: 1.5rem; margin-bottom: 1rem;">Technologies Used</h3>
+                    <div id="projectTechTags" class="tech-tags"></div>
+                </div>
+                
+                <div class="project-links" id="projectLinks"></div>
+                
+                <div class="project-features">
+                    <h3 style="color: #4a90e2; font-size: 1.5rem; margin-bottom: 1rem;">Key Features</h3>
+                    <div id="projectFeatures" class="features-grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+	<!-- Display current year in copyright notice -->
+	<script>
+		document.getElementById("year").innerHTML = new Date().getUTCFullYear();
+	</script>
 
-		<!-- Display current year in copyright notice -->
-		<script>
-			document.getElementById("year").innerHTML = new Date().getUTCFullYear();
-		</script>
-
-		<script src="script/modal.js"></script>
-    </body>
+	<script src="script/modal.js"></script>
+	<script src="script/portfolio-data.js"></script>
+</body>
 </html>
