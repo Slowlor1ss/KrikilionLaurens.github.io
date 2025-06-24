@@ -127,9 +127,18 @@
             {
                 title: "8080 Emulator",
                 image: "https://github.com/Slowlor1ss/8080Emulator/blob/main/Images/Animation2.gif?raw=true",
-                shortDescription: "A 8080 microprocessor emulator that can run classic space invaders and COM programs, Fully written in C++ I mainly chose this emulator to learn more about emulator development and low-level programming.",
-                longDescription: "This 8080 microprocessor emulator is a comprehensive recreation of the classic Intel 8080 processor, capable of running authentic vintage software including the iconic Space Invaders arcade game. Built entirely in C++, this project represents a deep dive into computer architecture and low-level programming concepts. The emulator accurately simulates the instruction set, memory management, and timing characteristics of the original 8080 processor, providing an authentic experience for classic software. This project was undertaken to gain hands-on experience with emulator development, understanding how processors execute instructions, and learning about the intricate details of computer hardware simulation.",
+                //shortDescription: "A 8080 microprocessor emulator that can run classic space invaders and COM programs, Fully written in C++ I mainly chose this emulator to learn more about emulator development and low-level programming.",
+                longDescription: 
+                    "A recreation of the classic Intel 8080 processor in software, \
+                    capable of running the iconic Space Invaders arcade game and any COM programs made for the 8080. \
+                    Built entirely in C++, this project was a deep dive into computer architecture and low-level programming concepts. \
+                    The emulator simulates the instruction set, memory management, and timing characteristics of the original 8080 processor. \
+                    I started this project to gain more experience with emulator development, \
+                    understanding how processors execute instructions, \
+                    and learning some of the intricacies of computer hardware simulation.",
+                descriptionMedia: "",
                 technologies: ["C++", "Assembly", "Low-level Programming", "Computer Architecture", "SDL2"],
+                extraHTMLFile: "https://raw.githubusercontent.com/Slowlor1ss/KrikilionLaurens.github.io/refs/heads/v3/extras/8080Processor.html",
                 githubUrl: "https://github.com/Slowlor1ss/8080Emulator",
                 features: [
                     {
@@ -142,7 +151,7 @@
                     },
                     {
                         title: "Space Invaders Compatible",
-                        description: "Successfully runs the original Space Invaders ROM with full graphics and sound support."
+                        description: "Successfully runs the original Space Invaders ROM"
                     },
                     {
                         title: "Debugging Tools",
@@ -153,14 +162,22 @@
             {
                 title: "Reinforcement Learning in 2D Shooter",
                 image: "https://github.com/Slowlor1ss/2D-Shooter-MachineLearning/blob/main/source/Media/Combined.gif?raw=true",
-                shortDescription: "This was a research project I did about reinforcement learning in 2D shooter games.",
-                longDescription: "An extensive research project exploring the application of reinforcement learning algorithms in 2D shooter game environments. This project investigates how AI agents can learn complex combat strategies, movement patterns, and decision-making processes through trial and error in a dynamic game environment. The research compares different RL algorithms including Deep Q-Networks (DQN), Policy Gradient methods, and Actor-Critic approaches to determine the most effective strategies for game AI development. The project includes comprehensive analysis of learning curves, behavioral patterns, and performance metrics, contributing valuable insights to the field of game AI research.",
-                technologies: ["Python", "TensorFlow", "OpenAI Gym", "Reinforcement Learning", "Neural Networks", "C++"],
+                //shortDescription: "This was a research project I did about reinforcement learning in 2D shooter games.",
+                longDescription: 
+                    "This was a research project I did about reinforcement learning in 2D shooter games, \
+                    while this project didn't turn out as well as I hoped it would, I did learn a lot from it and really enjoyed it.<br> \
+					The code in this project isn't the best as it was mainly focused on research. \
+                    However besides these things I did get some nice results and managed to write a small article about the process.<br> \
+					<br> \
+					You can find the full research paper with all the code on my github (see button below)<br> \
+					but here's my conclusion.",
+                technologies: ["Genetic Algorithms", "Reinforcement Learning", "SDL2", "C++"],
+                extraHTMLFile: "https://raw.githubusercontent.com/Slowlor1ss/KrikilionLaurens.github.io/refs/heads/v3/extras/ReinforcementLearning.html",
                 githubUrl: "https://github.com/Slowlor1ss/2D-Shooter-MachineLearning",
                 features: [
                     {
-                        title: "Multiple RL Algorithms",
-                        description: "Implementation and comparison of DQN, Policy Gradient, and Actor-Critic methods for optimal performance."
+                        title: "Multiple Genetic Algorithms",
+                        description: "Implementation and comparison of <b>Fitness proportionate selection</b>, <b>Stochastic universal sampling</b>, and <b>Tournament selection</b>."
                     },
                     {
                         title: "Custom Game Environment",
@@ -172,29 +189,30 @@
                     },
                     {
                         title: "Research Documentation",
-                        description: "Detailed research paper documenting methodology, results, and insights for academic contribution."
+                        description: "Research paper documenting methodology, results, and insights."
                     }
                 ]
             },
             {
-                title: "Ray Marching Experiments",
+                title: "Ray Marching",
                 image: "https://github.com/Slowlor1ss/KrikilionLaurens.github.io/blob/main/Images/BallsSmaller.gif?raw=true",
-                shortDescription: "This is a small Unity project I made to experiment with compute shaders and ray marching.",
-                longDescription: "An experimental Unity project focused on exploring advanced rendering techniques through compute shaders and ray marching algorithms. This project demonstrates the power of GPU computing for real-time procedural rendering, creating complex 3D scenes and effects that would be impossible with traditional polygon-based rendering. The ray marching implementation includes distance field calculations, volumetric rendering, and procedural geometry generation, all running in real-time on the GPU. This project serves as both a learning exercise in advanced graphics programming and a showcase of modern rendering capabilities, pushing the boundaries of what's possible in real-time graphics.",
+                //shortDescription: "This is a small Unity project I made to experiment with compute shaders and ray marching.",
+                longDescription: "This was my first time using unity's compute shader so I started off by making a small test project randomizing the color and position of some cubes,<br> \
+					I found that it wasn't too diffrent from a class I had in school where we made a raytracer and rasterizer in C++ using <b>DirectX<\/b> and <b>HLSL<\/b>, so it was suprisingly easy to get in to.<br> \
+					After that I felt confident enough to start on making the raymarching project.<br> \
+                    The raytracer and raymarching and seeing whats possible using the signed distance formulas raymarching uses.<br> \
+					If you're interested you can find and download my project and or read more about it on <a href=\"https:\/\/github.com\/Slowlor1ss\/Raymarching\/\" target=\"_blank\">my github</a>.",
                 technologies: ["Unity", "HLSL", "Compute Shaders", "Ray Marching", "Distance Fields", "GPU Programming"],
-                githubUrl: "https://github.com/Slowlor1ss/KrikilionLaurens.github.io",
+                extraHTMLFile: "https://raw.githubusercontent.com/Slowlor1ss/KrikilionLaurens.github.io/refs/heads/v3/extras/RayMarching.html",
+                githubUrl: "https://github.com/Slowlor1ss/Raymarching",
                 features: [
                     {
                         title: "Real-time Ray Marching",
-                        description: "GPU-accelerated ray marching implementation for complex 3D scene rendering without traditional polygons."
+                        description: "GPU-accelerated ray marching implementation for simple 3D scene rendering without traditional polygons."
                     },
                     {
                         title: "Distance Field Operations",
-                        description: "Advanced distance field techniques for smooth blending, boolean operations, and procedural geometry."
-                    },
-                    {
-                        title: "Volumetric Effects",
-                        description: "Dynamic volumetric rendering capabilities for atmospheric effects and particle-like behaviors."
+                        description: "Distance field techniques for smooth blending, boolean operations, and procedural geometry."
                     },
                     {
                         title: "Interactive Parameters",
@@ -205,10 +223,18 @@
             {
                 title: "Respect the Lawn",
                 image: "Images/RespectTheLawnTitle.png",
-                shortDescription: "A group-based Unity project where you play as a mushroom on a mission to stop a lawnmower from destroying your garden home.",
-                longDescription: "Respect the Lawn is a group game development project created in Unity, centered around a whimsical yet intense story of a mushroom defending its garden from a rampaging lawnmower. Developed collaboratively by a team of 3 artists and 2 programmers, this project emphasizes procedural techniques and gameplay AI. My personal focus is on building procedural insect animations to reduce the animation workload and enhance movement realism, as well as implementing AI logic using Unity’s NavMesh agents combined with a custom-built Finite State Machine (FSM). Still in its early stages, the project showcases ongoing collaboration, creative problem-solving, and a fun twist on traditional game mechanics.",
-                technologies: ["Unity", "C#", "NavMesh", "Procedural Animation", "Finite State Machine", "Game AI"],
-                githubUrl: "", // No GitHub provided – leave empty or add if available
+                //shortDescription: "A group-based Unity project where you play as a mushroom on a mission to stop a lawnmower from destroying your garden home.",
+                longDescription: 
+                    "Respect the Lawn is a group game development project created in Unity, centered around a story of a mushroom defending its garden from a rampaging lawnmower. \
+                    Our team concisted of 3 artists and 2 programmers, this project emphasizes procedural techniques and gameplay AI. \
+                    My personal focus was on making the <b>procedural insect animations<\/b> to reduce the animation workload and enhance movement realism, \
+                    as well as implementing <b>AI<\/b> logic using Unity’s NavMesh agents combined with a custom-built Finite State Machine (<b>FSM<\/b>). \
+                    and I did most of the game design, coming up, prototyping and working out gameplay features. \
+                    More information and showcasing is available on the Itch.io page<br><br> \
+                    <b>Below is a small video of a early version of the procedural animation system in work<\/b>",
+                descriptionMedia: "Images/ProceduralAnimation.gif",
+                technologies: ["Unity", "C#", "NavMesh", "Procedural Animation", "Finite State Machine", "Game Design"],
+                itchIoUrl: "https://glennstrooybants.itch.io/respect-the-lawn",
                 features: [
                     {
                         title: "Procedural Animations",
@@ -217,6 +243,14 @@
                     {
                         title: "Finite State Machine AI",
                         description: "Custom FSM system managing AI states like patrolling, chasing, and avoiding the lawnmower threat."
+                    },
+                    {
+                        title: "Game design",
+                        description: "I did a lot of work on the game design of this game."
+                    },
+                    {
+                        title: "Prototyping",
+                        description: "We started of with multiple prototypes and lots of bad ideas. :)"
                     },
                     {
                         title: "Collaborative Game Design",
@@ -230,20 +264,25 @@
             },
             {
                 title: "Custom Compiler",
-                image: "https://github.com/Slowlor1ss/Compiler/raw/main/imgs/example.png", // example screenshot from repo
-                shortDescription: "A compiler written from scratch for a custom-designed programming language with features like type checking, intermediate representation, and assembly output.",
-                longDescription: "This project is a fully custom-built compiler implemented in C++ for a uniquely designed programming language. The compiler includes key phases of compilation: lexical analysis, parsing, semantic analysis, intermediate representation generation, and x86 assembly output. It supports static type checking, function calls, and control structures, making it a complete end-to-end system for source-to-binary translation. The compiler was built as an educational tool to gain a deeper understanding of language design, parsing techniques, and low-level code generation. This hands-on project demonstrates a strong grasp of formal grammar construction, syntax tree management, and backend assembly generation.",
-                technologies: ["C++", "Compilers", "Parsing", "Lexing", "Assembly", "x86 Architecture"],
+                image: "Images/CompilerLogo.png",
+                //shortDescription: "A compiler written from scratch for a custom-designed programming language with features like type checking, intermediate representation, and assembly output.",
+                longDescription: 
+                    "This project is a fully custom-built compiler implemented in C++ for a self made programming language (Pretty much just a simple C-styled language). \
+                    The compiler includes key phases of compilation: <b>lexical analysis<\/b>, <b>parsing<\/b>, <b>semantic analysis<\/b>, <b>intermediate representation generation<\/b>, and <b>x86 assembly output<\/b>. \
+                    It supports static type checking, function calls, and control structures, cnst propagarion and some other optimizations. \
+                    The compiler was built as a research project <b>looking in to the impact of certain optimization techniques.<\/b>",
+                technologies: ["C++", "Compilers optimizations", "Parsing", "Lexing", "Assembly", "x86 Architecture"],
+                //extraHTMLFile: "extras/compiler.html",
+                extraHTMLFile: "https://raw.githubusercontent.com/Slowlor1ss/KrikilionLaurens.github.io/refs/heads/v3/extras/compiler.html",
                 githubUrl: "https://github.com/Slowlor1ss/Compiler",
-                extraHTMLFile: "extras/compiler.html",
                 features: [
                     {
-                        title: "Lexical and Syntax Analysis",
-                        description: "Custom-built lexer and parser for translating source code into a structured abstract syntax tree (AST)."
+                        title: "Compiler Optimizations",
+                        description: "The main purpose of this research project was implementing and profiling optimization techniques in compilers."
                     },
                     {
                         title: "Static Type Checking",
-                        description: "Implements static type analysis to catch type errors at compile-time, ensuring safer code."
+                        description: "Implements static type analysis to catch type errors at compile-time."
                     },
                     {
                         title: "Intermediate Representation",
@@ -254,7 +293,46 @@
                         description: "Outputs valid x86 assembly code which can be assembled and run, completing the compilation pipeline."
                     }
                 ]
-            }
+            },
+            {
+                title: "Age of Empires IV Xbox Port",
+                video: "https://github.com/Slowlor1ss/KrikilionLaurens.github.io/blob/main/Images/Age of Empires IV Console Launch Trailer.mp4?raw=true",
+                longDescription: 
+                    "During my first year at Climax Studios, I contributed to the Xbox port of Age of Empires IV as a member of the optimization team. \
+                    My role focused on improving performance and memory efficiency to get the game to run as smooth as possible on Xbox hardware <b>(Xbox one - Xbox Series X)<\/b>. \
+                    I worked closely with both PC and Xbox teams both internally and <b>with clients<\/b>, particularly optimizing using <b>PIX captures<\/b> and in -game & -engine tools to diagnose rendering and performance bottlenecks. \
+                    I implemented targeted improvements in thread management and memory usage, \
+                    Some of which were critical to meeting the constraints of the hardware. \
+                    Beyond optimization, I also worked on numerous bug fixes across systems, helping stabilize the port and improve overall user experience. \
+                    Additionally, I contributed to UI development (unfortunately) working with XAML porting some of the in-game UI and Radial menus.",
+                technologies: [
+                    "C++",
+                    "Xbox SDK",
+                    "PIX Performance Analyzer",
+                    "XAML",
+                    "Multithreading",
+                    "Memory Optimization",
+                ],
+                //extraHTMLFile: "https://raw.githubusercontent.com/YourUsername/PortfolioExtras/main/age_of_empires_iv_xbox.html",
+                features: [
+                    {
+                        title: "Thread Optimizations",
+                        description: "Implemented improvements in parallelization of multithready tasks to improve CPU utilization on Xbox."
+                    },
+                    {
+                        title: "Memory Optimization",
+                        description: "Fixing memory leaks, and some graphics optimizations that saved us memory" // the blood rings that generated over 70k vertecies that definitly did not need them
+                    },
+                    {
+                        title: "PIX Integration",
+                        description: "Worked extensively with PIX both on Xbox and PC to capture detailed GPU and CPU traces, identifying and resolving rendering and performance issues."
+                    },
+                    {
+                        title: "Bug Fixes and Stabilization",
+                        description: "Contributed to identifying and fixing a wide range of bugs across gameplay systems and platform-specific issues."
+                    },
+                ]
+            },
         ];
 
         function openProjectDetail(index) {
@@ -264,10 +342,47 @@
             const navbar = document.getElementById('navbar');
             
             // Populate project details
-            document.getElementById('projectHeroMedia').src = project.image;
-            document.getElementById('projectHeroMedia').alt = project.title;
+            if(project.image)
+            {
+                document.getElementById('projectHeroVideo').style = "display: none;";
+                document.getElementById('projectHeroMedia').style = "display: block;";
+                document.getElementById('projectHeroMedia').src = project.image;
+                document.getElementById('projectHeroMedia').alt = project.title;
+            }
+            else if(project.video)
+            {
+                document.getElementById('projectHeroMedia').style = "display: none;";
+                document.getElementById('projectHeroVideo').style = "display: block;";
+                document.getElementById('projectHeroVideo').src = project.video;
+                document.getElementById('projectHeroVideo').alt = project.title;
+            }
             document.getElementById('projectDetailTitle').textContent = project.title;
-            document.getElementById('projectDetailDescription').textContent = project.longDescription;
+            document.getElementById('projectDetailDescription').innerHTML  = project.longDescription;
+            document.getElementById('projectDescriptionMedia').src = project.descriptionMedia;
+            if(project.descriptionMedia)
+                document.getElementById('projectDescriptionMedia').alt = "[Fitting image to the above description]";
+            
+            // Extra content container
+            const extraContainer = document.getElementById('projectExtra');
+            extraContainer.innerHTML = ''; // Clear previous content
+            if (project.extraClass)
+                extraContainer.className = project.extraClass;
+
+            // Load from external HTML file if provided
+            if (project.extraHTMLFile) {
+                fetch(project.extraHTMLFile)
+                    .then(response => {
+                        if (!response.ok) throw new Error(`Failed to load extra HTML: ${response.statusText}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        extraContainer.innerHTML = html;
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        extraContainer.innerHTML = `<p style="color: red;">Failed to load extra content.</p>`;
+                    });
+            }
             
             // Populate tech tags
             const techTags = document.getElementById('projectTechTags');
@@ -295,29 +410,20 @@
                 `;
                 linksContainer.appendChild(githubLink);
             }
-            
-            // Extra content container
-            const extraContainer = document.getElementById('projectExtra');
-            extraContainer.innerHTML = ''; // Clear previous content
-            if (project.extraClass)
-                extraContainer.className = project.extraClass;
-
-            // Load from external HTML file if provided
-            if (project.extraHTMLFile) {
-                fetch(project.extraHTMLFile)
-                    .then(response => {
-                        if (!response.ok) throw new Error(`Failed to load extra HTML: ${response.statusText}`);
-                        return response.text();
-                    })
-                    .then(html => {
-                        extraContainer.innerHTML = html;
-                    })
-                    .catch(error => {
-                        console.error(error);
-                        extraContainer.innerHTML = `<p style="color: red;">Failed to load extra content.</p>`;
-                    });
+            else if(project.itchIoUrl) {
+                const githubLink = document.createElement('a');
+                githubLink.href = project.itchIoUrl;
+                githubLink.target = '_blank';
+                githubLink.className = 'project-link';
+                githubLink.innerHTML = `
+                    <svg width="27" height="27" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M118 95c-16 10-49 47-49 56v16c0 21 19 38 36 38 21 0 38-17 38-37 0 20 17 37 38 37 20 0 36-17 36-37 0 20 18 37 39 37s39-17 39-37c0 20 16 37 36 37 21 0 38-17 38-37 0 20 17 37 38 37 17 0 36-17 36-38v-16c0-9-33-46-49-56a3511 3511 0 00-276 0zm99 101l-7 9a43 43 0 01-68-9l-7 9c-8 8-19 13-31 13l-4-1-2 46v18c0 36-4 118 16 138 30 7 86 10 142 10s112-3 142-10c20-20 16-102 16-138v-18l-2-46-4 1c-12 0-23-5-31-13l-7-9-7 9a43 43 0 01-68-9 43 43 0 01-38 22h-1-1a43 43 0 01-38-22zm-31 40c12 0 23 0 37 15l33-2 33 2c14-15 25-15 37-15 6 0 29 0 45 46l18 63c13 46-4 47-26 47-31-1-49-24-49-47a371 371 0 01-117 0c1 23-17 46-48 47-22 0-39-1-26-47l18-63c16-46 39-46 45-46zm70 36s-33 31-39 42l22-1v19h34v-19l22 1c-6-11-39-42-39-42z"/>
+                    </svg>
+                    View on Itch
+                `;
+                linksContainer.appendChild(githubLink);
             }
-
+            
             // Populate features
             const featuresContainer = document.getElementById('projectFeatures');
             featuresContainer.innerHTML = ''; // Clear previous content
