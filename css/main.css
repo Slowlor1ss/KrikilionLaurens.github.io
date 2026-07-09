@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+b {
+    background: linear-gradient(135deg, #ff6b6b, #cd4e78);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
