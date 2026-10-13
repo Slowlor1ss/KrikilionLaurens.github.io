@@ -333,6 +333,47 @@
                     },
                 ]
             },
+            {
+                title: "Microsoft Flight Simulator 2024 — PlayStation",
+                image: "Images/FlightSimulator2024.png",
+                longDescription:
+                    "I worked on the PlayStation version of Microsoft Flight Simulator 2024, helping bring core engine systems across to PS5 and improve the performance on the platform. This involved setting up the project for PlayStation, replacing and stubbing platform-specific Win32 code with PS5 equivalents, porting and building third-party libraries, and resolving the resulting integration and linker issues. I also worked extensively with the PlayStation SDK.\
+                    <br><br>\
+                    A major focus was platform-level threading: adapting thread creation and management, tuning thread affinity and priorities, working on job scheduling, and useage of fibres. This work included tracking down difficult concurrency issues and deadlocks.\
+                    <br><br>\
+                    I also worked on a bucket-based memory allocator. It divides memory into pages and groups allocations by size, allowing pages to be reused as allocations are freed. I investigated allocator contention, page-list management, and cleanup strategies to balance memory usage with allocation performance. Fixing a memory leak reduced memory attributed to the allocator after loading from roughly 180 MB to 85 MB without a performance cost, and further allocator work got us to around 30 MB at that point in the loading flow.\
+                    <br><br>\
+                    Other platform work included PlayStation Activity Cards, the controller lightbar, and integration with the UDS Manager and GEMS systems.",
+                technologies: [
+                    "C++",
+                    "PlayStation 5 SDK",
+                    "Platform Porting",
+                    "Multithreading",
+                    "Job Scheduling",
+                    "Thread Affinity",
+                    "Fibres",
+                    "Memory Management",
+                    "Lock-free Algorithms"
+                ],
+                features: [
+                    {
+                        title: "PS5 Platform Bring-up",
+                        description: "Set up the project for PlayStation, implemented platform equivalents for Win32-specific code, and ported and built libraries for PS5."
+                    },
+                    {
+                        title: "Threading and Scheduling",
+                        description: "Worked on PS5 thread creation, priorities, affinity, job scheduling, and fibre usage, while diagnosing deadlocks and concurrency issues."
+                    },
+                    {
+                        title: "Memory Optimisation",
+                        description: "Developed a bucket-based allocator using pages grouped by allocation size, and investigated page reuse and cleanup strategies to reduce memory overhead."
+                    },
+                    {
+                        title: "PlayStation Integration",
+                        description: "Implemented support for Activity Cards and the controller lightbar, and worked on UDS Manager and GEMS integration."
+                    }
+                ]
+            },
         ];
 
         function openProjectDetail(index) {
