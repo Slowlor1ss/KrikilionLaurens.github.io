@@ -375,7 +375,7 @@
                     },
                     {
                         title: "Memory Optimisation",
-                        description: "Developed a lock free bucket based allocator using pages grouped by allocation size, and investigated page reuse and cleanup strategies to reduce memory overhead."
+                        description: "Optimised a lock free bucket based allocator, investigating page reuse, concurrency issues, and cleanup strategies to reduce memory overhead."
                     },
                     {
                         title: "PlayStation Integration",
@@ -383,6 +383,42 @@
                     }
                 ]
             },
+            {
+                // Note to self: remember SVEN 
+                title: "Unannounced AAA Project — Wwise Audio Pipeline",
+                image: "Images/mystery-product.png",
+                longDescription:
+                "<h3>Audio Migration Tool | Wwise</h3>\
+                <p>As part of the project's move to Wwise, I built a <b>audio migration tool</b> using the <b>Wwise WAAPI</b>. It automatically converted audio data from three previous titles (proprietary engine, which used a custom audio system) into the new engine (using WWise for audio), recreating folder structures, events, buses, attenuation settings, gain values, and other configuration without needing to set everything up by hand. This saved a significant amount of time when migrating and checking the project's audio content.</p>\
+                <h3>Acting Lead Audio Programmer | Engine Integration</h3>\
+                <p>I was the <b>acting lead audio programmer</b> on the project, taking responsibility for the audio side of the engine code, including upgrading from <b>Wwise 2024 to Wwise 2025</b></p>\
+                <h3>Gameplay Audio | Runtime Systems</h3>\
+                <p>I worked directly with the audio designers to get their content working in-game, implementing and configuring features such as <b>RTPCs, Switches, audio portals, and environmental audio</b>. This involved making sure the systems worked as expected in the engine and giving the audio team the tools they needed to build and tune their content.</p>",
+                technologies: ["Wwise", "Wwise WAAPI", "C++", "Audio Pipeline", "Engine Integration", "Gameplay Audio"],
+                features: [
+                    { title: "Automated Audio Migration", description: "Built a WAAPI-based tool to migrate audio configuration from three previous titles, recreating project structure and settings automatically." },
+                    { title: "Wwise Version Upgrade", description: "Owned the upgrade from Wwise 2024 to Wwise 2025 while maintaining compatibility with existing engine systems." },
+                    { title: "Gameplay Audio Systems", description: "Worked with audio designers to integrate RTPCs, Switches, audio portals, environmental audio, and related runtime features." }
+                ]
+            },
+            {
+                title: "Unannounced Co-op Multiplayer Game — Unreal Engine Audio",
+                image: "Images/mystery-product.png",
+                longDescription:
+                    "I have been responsible for the audio implementation on an unannounced co-op multiplayer game built in <b>Unreal Engine</b>, covering voice chat integration, runtime audio systems, basic sound design, and multiplayer audio replication.\
+                    <h3>Vivox Voice Chat Integration</h3>\
+                    <p>I implemented a full <b>Vivox voice chat system</b> and routed voice audio through Unreal Engine's audio pipeline, allowing it to use the engine's <b>spatial attenuation and environmental reverbs</b> for a more immersive in-game experience.</p>\
+                    <h3>MetaSounds & Gameplay Audio</h3>\
+                    <p>I set up the project's <b>audio bus routing</b> and created <b>MetaSounds</b> for both straightforward playback and more complex, dynamic audio behaviours. This included a <b>context-sensitive footstep system</b> that responds to player movement speed and the physical material being walked on.</p>\
+                    <h3>Audio Design & Multiplayer Replication</h3>\
+                    <p>With no dedicated audio designer on the project, I also handled basic audio design and implementation. I managed <b>multiplayer audio replication</b>, ensuring relevant gameplay audio events were handled correctly across players in the shared game world.</p>",
+                technologies: ["Unreal Engine", "Multiplayer", "Vivox", "MetaSounds", "Audio Attenuation", "Environmental Reverb", "Audio Replication"],
+                features: [
+                    { title: "Vivox Voice Chat", description: "Integrated Vivox voice chat with Unreal's audio pipeline to support spatial attenuation and environmental reverbs." },
+                    { title: "Gameplay-Driven MetaSounds", description: "Built MetaSounds for simple and complex audio, including footsteps driven by movement speed and physical surface." },
+                    { title: "Multiplayer Audio", description: "Managed replication of gameplay audio and contributed audio design and implementation across the project." }
+                ]
+            }
         ];
 
         function openProjectDetail(index) {
