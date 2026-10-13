@@ -795,6 +795,24 @@ header {
     color: #ccc;
 }
 
+.project-description h3 {
+    margin: 2rem 0 0.75rem;
+    color: #fff;
+    font-size: 1.35rem;
+    line-height: 1.4;
+}
+
+.project-description p {
+    margin: 0 0 1rem;
+}
+
+.project-description code {
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 0.9em;
+}
+
 .project-extra {
     font-size: 1.2rem;
     line-height: 1.8;

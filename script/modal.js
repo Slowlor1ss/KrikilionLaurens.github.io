@@ -336,14 +336,23 @@
             {
                 title: "Microsoft Flight Simulator 2024 — PlayStation",
                 image: "Images/FlightSimulator2024.png",
+                 // <h3>Bucket Allocator | Memory Optimisation</h3>\
+                // <p>The allocator manages a large block of memory divided into fixed-size pages. Each bucket handles a particular allocation size, so a request is routed to a suitable bucket and a page is assigned to that bucket when it is first needed. Pages track which bucket they belong to, while a per bucket list keeps track of pages that still have room for allocations. When a page becomes full it is removed from that available-page list, and when a block is freed it can become available again.</p>\
+                // <p>A bitset tracks which blocks on each page are in use. This makes it possible to identify full pages and reuse freed space.</p>\
+                // <p>The tricky part was keeping page state and the available-page lists consistent when allocations and deallocations happened concurrently: two threads could update a page at the same time, potentially leaving duplicate or corrupted list entries. I investigated synchronisation approaches and page-list strategies, balancing thread safety, allocation speed, and memory usage.</p>\
+                // <p>Rather than sorting page lists on every deallocation, I explored scanning a bucket's relatively short list during allocation and periodically cleaning up empty pages. This reduced the amount of work performed on every allocation/free while helping reclaim pages that were no longer needed. I also fixed a memory leak: memory attributed to the allocator after loading fell from roughly 180 MB to 85 MB with no performance cost. Further allocator work brought that figure to around 30 MB at the same point in the loading flow.</p>\
+                
                 longDescription:
-                    "I worked on the PlayStation version of Microsoft Flight Simulator 2024, helping bring core engine systems across to PS5 and improve the performance on the platform. This involved setting up the project for PlayStation, replacing and stubbing platform-specific Win32 code with PS5 equivalents, porting and building third-party libraries, and resolving the resulting integration and linker issues. I also worked extensively with the PlayStation SDK.\
-                    <br><br>\
-                    A major focus was platform-level threading: adapting thread creation and management, tuning thread affinity and priorities, working on job scheduling, and useage of fibres. This work included tracking down difficult concurrency issues and deadlocks.\
-                    <br><br>\
-                    I also worked on a bucket-based memory allocator. It divides memory into pages and groups allocations by size, allowing pages to be reused as allocations are freed. I investigated allocator contention, page-list management, and cleanup strategies to balance memory usage with allocation performance. Fixing a memory leak reduced memory attributed to the allocator after loading from roughly 180 MB to 85 MB without a performance cost, and further allocator work got us to around 30 MB at that point in the loading flow.\
-                    <br><br>\
-                    Other platform work included PlayStation Activity Cards, the controller lightbar, and integration with the UDS Manager and GEMS systems.",
+                    "I worked on the PlayStation version of Microsoft Flight Simulator 2024, helping bring core engine systems across to PS5 and improve performance on the platform. This involved setting up the project for PlayStation, replacing or <b>implementing PS5 equivalents for platform specific Win32 code</b>, porting and building third party libraries, resolving linker and integration issues, and working extensively with the <b>PlayStation SDK</b>.\
+                    <h3>Lock free Bucket Allocator | Memory Optimisation</h3>\
+                    <p>I worked on optimising the engine's bucket allocator, focusing on reducing memory usage without sacrificing performance. One of the main challenges was balancing memory efficiency with thread safety, as allocations and deallocations could happen concurrently across multiple threads.</p>\
+                    <p>A key part of this work was improving how the allocator managed pages of memory. I explored different approaches to reusing partially filled pages and reclaiming empty ones, while avoiding expensive operations on every allocation or deallocation. This involved investigating race conditions in the allocator's internal data structures and finding a better balance between synchronisation, allocation speed, and memory usage.</p>\
+                    <p>I also identified and fixed a memory leak that was contributing to unnecessary memory usage. This reduced the memory attributed to the allocator after loading from around 180 MB to 85 MB without any performance cost. Further improvements to page management brought this down to around 30 MB at the same point in the loading process. Memory usage could increase during gameplay, but these changes significantly reduced the allocator's overhead.</p>\
+                    <h3>Resolving Priority Inversion on PS5</h3>\
+                    <p>On PS5, thread scheduling works differently from platforms like PC and Xbox. Normally, thread priorities help ensure that important work gets CPU time before less urgent tasks. However, on PS5, a running thread isn't automatically preempted when a higher priority thread becomes ready, and PS5's <code>threadYield()</code> only allows threads of the same priority to be scheduled. This caused issues with spinlocks, where threads keep busy waiting for a lock instead of blocking. If enough high priority threads were spinning across the available CPU cores, the lower priority thread holding the lock could be prevented from running and releasing it, leaving the waiting threads stuck and potentially causing deadlocks. Simply increasing thread priorities couldn't solve this, as the scheduler couldn't preempt the spinning threads to let the lock owner run.</p>\
+                    <p>I implemented a mitigation in the scheduler code that detects sustained contention across busy-waiting threads and uses a short mutex lock to make waiting threads block instead of continuing to spin indefinitely. This gives the scheduler an opportunity to run threads of different priorities, including the thread responsible for releasing the contested lock. The detection also tracks contention across the scheduler rather than individual spinlocks, since multiple busy-wait loops could collectively cause the issue without any single lock reaching the threshold.</p>\
+                    <p>This resolved the priority inversion issues that had prevented thread priorities from being enabled on PS5, allowing us to reintroduce thread prioritisation and win back a noticeable performance improvement.</p><h3>Other PlayStation Integration</h3>\
+                    <p>I also worked on PlayStation Activity Cards, controller lightbar support, and integration with the UDS Manager and GEMS systems, as well as using fibres where appropriate.</p>",
                 technologies: [
                     "C++",
                     "PlayStation 5 SDK",
@@ -357,8 +366,8 @@
                 ],
                 features: [
                     {
-                        title: "PS5 Platform Bring-up",
-                        description: "Set up the project for PlayStation, implemented platform equivalents for Win32-specific code, and ported and built libraries for PS5."
+                        title: "PS5 Platform Bring up",
+                        description: "Set up the project for PlayStation, implemented platform equivalents for Win32 specific code, and ported and built libraries for PS5."
                     },
                     {
                         title: "Threading and Scheduling",
@@ -366,7 +375,7 @@
                     },
                     {
                         title: "Memory Optimisation",
-                        description: "Developed a bucket-based allocator using pages grouped by allocation size, and investigated page reuse and cleanup strategies to reduce memory overhead."
+                        description: "Developed a lock free bucket based allocator using pages grouped by allocation size, and investigated page reuse and cleanup strategies to reduce memory overhead."
                     },
                     {
                         title: "PlayStation Integration",
